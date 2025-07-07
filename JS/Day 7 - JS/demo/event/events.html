@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      #container {
+        border: 2px black solid;
+        padding: 20px;
+        text-align: center;
+        font-size: 100px;
+      }
+      #tryEvent {
+        text-align: center;
+        border: 2px rgb(76, 74, 74) solid;
+        padding: 20px;
+        color: rgb(76, 74, 74);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Try event handling ways</h1>
+    <div
+      id="test"
+      onmousedown="console.log('mouse down')"
+      onmouseup="console.log('mouse up')"
+    >
+      try mouse event properties
+    </div>
+    <div
+      id="container"
+      onmouseleave="console.log('mouse leave')"
+      onmouseenter="console.log('mouse enter')"
+    >
+      Hi there!
+    </div>
+    <h1
+      id="tryEvent"
+      onmouseover="this.style.color ='red'"
+      onmouseout="this.style.color='black'"
+    >
+      click me!
+    </h1>
+
+    <script></script>
+  </body>
+</html>

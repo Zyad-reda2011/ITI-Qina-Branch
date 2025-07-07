@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>CSS Layout Page</title>
+    <style>
+      #header {
+        height: 100px;
+        line-height: 50px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      #footer {
+        height: 50px;
+      }
+
+      div.headerFooter {
+        background-color: gray;
+        height: 100px;
+        padding: 10px;
+        font-size: 50px;
+        text-align: center;
+      }
+      .article {
+        padding: 20px;
+      }
+      .middleDiv {
+        height: inherit;
+        float: left;
+      }
+
+      #content {
+        height: 400px;
+        /*must be set*/
+      }
+      .test {
+        color: blueviolet;
+        border: solid 2px yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="headerFooter">This is header</div>
+    <div id="content">
+      <div
+        class="middleDiv"
+        style="width: 20%; background-color: rgba(110, 164, 110, 0.632)"
+      ></div>
+      <div
+        class="middleDiv"
+        style="width: 60%; background-color: rgba(255, 192, 203, 0.486)"
+      >
+        <div class="article">
+          <div>
+            <h2>Article 1</h2>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+            dolor facere vel labore provident, animi voluptatibus veritatis
+            repellat, saepe quos eius ipsa officia dolore soluta magni, quia
+            consectetur aut doloribus.
+          </p>
+          <div>all copy rights &copy; to sals</div>
+        </div>
+        <span>Front Qena</span>
+        <!-- comment -->
+        <div class="article">
+          <div>
+            <h2 class="unique">Article 2</h2>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+            dolor facere vel labore provident, animi voluptatibus veritatis
+            repellat, saepe quos eius ipsa officia dolore soluta magni, quia
+            consectetur aut doloribus.
+          </p>
+          <div>all copy rights &copy; to sals</div>
+        </div>
+        <!-- comment -->
+      </div>
+      <div
+        class="middleDiv"
+        style="width: 20%; background-color: rgba(121, 213, 234, 0.516)"
+      >
+        <h2>Hello there</h2>
+      </div>
+    </div>
+
+    <div id="footer" class="headerFooter"></div>
+    <script>
+      //1-accessing the node => you can access the node by 5 ways
+      // console.log(document.getElementById("content")); //get the element by the id name
+      // console.log(document.getElementsByTagName("h2")); //retutn all the element by the tag u choose
+      //console.log(document.getElementsByTagName("h2")[0]); //return a specific element by the tag u choose according to the index u pass
+      // console.log(document.getElementsByClassName("article"));//return all the element by the class u choose
+      // console.log(document.getElementsByClassName("article")[0]);//return a specific element by the class u choose according to the index u pass
+      // console.log(document.querySelector(".article")); //return the first element by the selector u choose
+      // console.log(document.querySelectorAll(".article")); //return all the element by the selector u choose
+
+      //2-modifying the node
+      //changing content
+      var div = document.getElementById("content");
+      // div.textContent = "<h1>Ahmed Alaa</h1> <p>hello</p>";
+      // div.innerHTML = "<h1>Ahmed Alaa</h1> <p>hello</p>";
+      //3- changing the node style
+      var h2 = document.getElementsByTagName("h2")[0];
+      // h2.style.backgroundColor = "red";
+      // h2.style.color = "white";
+      // h2.style.paddingLeft = "80px";
+      // h2.setAttribute("class", "test");
+      //4- adding the node
+      // var img = document.createElement("img"); //createElement is a function that create a new node and takes the tag name as a parameter
+      // img.setAttribute(
+      //   "src",
+      //   "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      // );
+      // img.src =
+      //   "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+      // h2.appendChild(img);
+      //4 - removing the node
+      // h2.remove();
+    </script>
+  </body>
+</html>

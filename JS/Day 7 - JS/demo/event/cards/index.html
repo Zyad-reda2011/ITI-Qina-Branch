@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animals</title>
+    <style>
+      img {
+        width: 180px;
+        max-height: 180px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Find the animal</h1>
+    <img id="1" src="./memoryImg.jpg" />
+    <img id="2" src="./memoryImg.jpg" />
+    <img id="3" src="./memoryImg.jpg" />
+
+    <script>
+      //access the images
+      var img1 = document.getElementById("1");
+      var img2 = document.getElementById("2");
+      var img3 = document.getElementById("3");
+      //add event
+      img1.onmouseenter = function () {
+        img1.setAttribute("src", "cat.jpg");
+      };
+      img2.onmouseenter = function () {
+        img2.src = "bird.png";
+      };
+      img3.onmouseenter = function () {
+        img3.src = "flower.webp";
+      };
+      function returnSrc(e) {
+        e.target.setAttribute("src", "memoryImg.jpg");
+      }
+      img1.addEventListener("mouseleave", returnSrc);
+      img2.addEventListener("mouseleave", returnSrc);
+      img3.addEventListener("mouseleave", returnSrc);
+    </script>
+  </body>
+</html>

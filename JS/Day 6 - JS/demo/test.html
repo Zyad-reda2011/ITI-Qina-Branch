@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>hello welcome</h1> -->
+    <script>
+      //   console.log(location.search.split("&")[0].split("=")[1]);
+      //   var name = location.search.split("&")[0].split("=")[1];
+      //   var age = location.search.split("&")[1].split("=")[1];
+      var q = new URLSearchParams(location.search);
+      console.log(q.get("userName"));
+      console.log(q.get("userAge"));
+      //   console.log(name);
+      //   console.log(age);
+      //   document.write("hello " + name + " you age is " + age);
+    </script>
+  </body>
+</html>
